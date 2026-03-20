@@ -18,11 +18,16 @@ como AWS S3 o Google Cloud Storage, combinado con una CDN para la entrega eficie
 de los videos a los usuarios. 
 
 Ventajas:
-*
+*Escalabilidad alta: Capacidad de manejar grandes volumenes de datos. 
+*Rendimiento y Baja latencia: Distribuye el contenido en servidores 
+geograficamente cercanos al usuario, esto ofrece la reproduccion fluida a los usuarios (Aprox 10.000)
+*Menor mantenimiento: La responsavilidad de la infraestructura recae en el proveedor de la nube.
+*Seguridad avanzada: Tiene herramientas nativas para la protección de los datos. 
 
-
-
-
+Desventajas: 
+*Costos variables: Estos pueden depender de is el flujo de los datos (egress), crece exponencialmente.
+*Dependencias del proveedor (Vendor Lock-in): La arquitectura se vuelve dependientes de las APIs y servicios de un tercero.
+*Curva de aprendizaje: Si la experiencia es poca en CDN, Se requerirá invertir más tiempo en aprender y optimizar el servicio.
 
 
 Opción B: 
