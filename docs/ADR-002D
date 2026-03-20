@@ -4,3 +4,10 @@ Aceptado
 Fecha: 20/03/2026
 
 Contexto: 
+La empresa EducaMas requiere desarrollar ua plataforma para cursos online,
+que sea fucional para estudiantes, instructores y administradores, los cursos pueden ser videos, 
+texto ejercicios y foros de discucion, los cursos deben mostrar el progreso del usuario.
+para el pago del curos se debe implementar pasarelas de pago como Webpay o Transbank etc.
+
+El equipo esta en el proceso de debate para seleccionar la estrategia de almacenamiento de 
+los videos de los cursos.
