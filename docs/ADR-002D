@@ -31,6 +31,22 @@ Desventajas:
 
 
 Opción B: 
-Almacenamiento en seridores propios: 
-Mantener los videos en servidores propios de la empresa.
 
+Ventajas:
+
+*Control Total: La empresa tiene soberanía absoluta sobre los datos y el hardware, sin depender de políticas de terceros
+*Costos a predictivos largo plazo: con la inversion inicial ya realizada en el hardware, no existira costos mensuales 
+por transferencia.
+*Provecho de Experiencia: esta ventaja solo aplica si el equipo cuenta con experiencia solida y conocimiento en gestion de
+de servidores locales.
+
+Desventajas: 
+
+*Costo capital inicial: requiere una gran inversion incial para servidores, almacenamiento
+ y sistemas de refrigeracion.
+*Dificultad de escalabilidad: si la plataforma tiene un crecimiento exponencial, ampliar la capacidad fisica 
+se convierte en un proceso lento y costoso para la nube.
+*Puntos de falla y Latencia: Sin una CDN, Los usuarios alejados al servidor sufriran de alta latencia y almacenamiento de 
+búfer lento.
+*Carga de Mantenimiento: el propio equipo es responsable del mantenimiento, parches y copias de seguridad para 
+el remplazo de hardware fallido.
