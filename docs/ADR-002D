@@ -50,3 +50,65 @@ se convierte en un proceso lento y costoso para la nube.
 búfer lento.
 *Carga de Mantenimiento: el propio equipo es responsable del mantenimiento, parches y copias de seguridad para 
 el remplazo de hardware fallido.
+
+Decision: 
+
+opcion a: Almacenamiento en la nube con 
+* AWS S3 + CloudFront  
+* Azure Blob Storage + Front Door).
+
+Justificación
+
+Esta decisión se basa en los siguientes puntos críticos:
+
+Escalabilidad: 
+
+La infraestructura de nube permite absorber el crecimiento de contenido (500
+horas de video) sin gestionar almacenamiento físico.
+
+Experiencia de Usuario: 
+
+El uso de una CDN garantiza una baja latencia y reproducción fluida
+para los 10,000 usuarios concurrentes, algo difícil de lograr con servidores propios debido al
+ancho de banda limitado.
+
+Seguridad:
+
+Facilita la implementación de URLs firmadas y protección de contenido contra
+descargas no autorizadas.
+
+Eficiencia de Costos:
+
+(OpEx): Al ser una startup con presupuesto limitado, se prefiere un modelo
+de pago por uso en lugar de una gran inversión inicial en hardware (CapEx).
+
+Consecuencias:
+
+La adopción de esta arquitectura conlleva las siguientes implicaciones:
+
+Impacto en el Desarrollo: El equipo deberá aprender a interactuar con las APIs del proveedor
+(ej. SDK de AWS o Azure) para la carga y gestión de archivos.
+
+Impacto en el Mantenimiento: Se reduce drásticamente la carga de mantenimiento operativo,
+ya que el proveedor gestiona la disponibilidad y parches de la infraestructura física.
+
+Impacto en los Costos: Se eliminan los costos de mantenimiento de servidores físicos, pero se
+debe monitorear el consumo mensual de transferencia de datos para evitar exceder el
+presupuesto
+
+Riesgos Identificados: Existe una dependencia directa del proveedor elegido (Vendor Lock-in) y
+el riesgo de costos variables si el tráfico supera las proyecciones iniciales.
+
+Resultado esperado:
+
+Plataforma altamente escalable: Capacidad para crecer junto con la demanda de contenido y
+usuarios sin interrupciones.
+
+Mejor experiencia de usuario (streaming fluido): Entrega de video con mínima latencia gracias
+al uso de nodos globales (CDN).
+
+Reducción de riesgos operativos: Menor probabilidad de caídas del servicio al delegar la
+infraestructura crítica a un proveedor experto.
+
+Base sólida para crecimiento futuro: Una arquitectura moderna que permite integrar nuevas
+tecnologías fácilmente a medida que el negocio escale.
